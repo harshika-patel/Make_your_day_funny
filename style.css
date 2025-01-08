@@ -20,25 +20,28 @@ html, body {
 .main-heading {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 2rem;
+    height: 100%;
 }
 h1 {
     position:relative;
     font-size: 5rem;
-    color: #ffdb58;
-    -webkit-text-stroke: 0.2vw #ff69b4;
+    color: #191970;
+    -webkit-text-stroke: 0.1vw #ff69b4;
 }
 
 h1::before {
-    content: attr(heading);
+    content: "Make your Day Funny..";
     position: absolute;
     top: 0;
     left:0;
+    display: inline-block;
+    white-space: nowrap;
     width: 0;
     height: 100%;
-    color: #FFDB58;
+    color: #ffdb58;
     -webkit-text-stroke: 0vw #ff69b4;
     border-right: 2px solid #ffdb58;
     overflow: hidden;
@@ -67,6 +70,7 @@ h1::before {
     cursor:pointer;
     margin-top: 1rem;
     width: 12.5rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -76,12 +80,43 @@ button:active {
     border: 0px 10px 0px 0px #909090;
 }
 
+.jokes-section {
+    background-color: #fafafa;
+    width: rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    color: rgb(28, 26, 26);
+    padding: 2rem;
+    
+}
+
+
+.jokes-section_avatar {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    
+
+}
+
+.jokes-section_username {
+    padding-left: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.jokes-section_username span {
+    margin-left: 1rem;
+    color: #909090;
+}
+
 .joke{
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  margin-bottom: 1rem;
   background-size: contain;
   position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -89,7 +124,19 @@ button:active {
 
 .getjoke {
   padding: 1rem;
-  color: #ffdb58;
-  text-align: 0;
+  color: black;
+}
+
+.getgiphy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.giphy_image {
+    height: 5%;
+    border-radius: 1rem;
+    object-fit: contain;
 
 }

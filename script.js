@@ -7,8 +7,6 @@ async function getData() {
         Accept: "application/json",
       },
     });
-
-    //delay
     
     //getting random joke
     let getJokeDiv = document.querySelector(".getjoke");
@@ -40,8 +38,11 @@ async function getData() {
     getGiphyDiv.innerHTML = ""; // Clear previous content
     if (gifUrl) {
       const img = document.createElement("img");
+      img.classList.add("giphy_image");
       img.src = gifUrl;
       img.alt = "gif";
+      img.style.width = "300px";  // Set width
+      img.style.height = "200px"; // Set height
       getGiphyDiv.appendChild(img);
     } else {
       getGiphyDiv.textContent = "No GIF found for this joke.";
